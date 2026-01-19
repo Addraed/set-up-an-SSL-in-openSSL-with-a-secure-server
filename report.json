@@ -1,0 +1,9 @@
+{
+  "Apache Service": "✅ Apache is running.",
+  "SSL Module": "✅ The SSL module is enabled.",
+  "Certificate File": "✅ Found certificate at /etc/ssl/certs/myserver.crt",
+  "Key File": "✅ Found private key at /etc/ssl/private/myserver.key",
+  "Certificate Validity": "✅ Valid certificate. Common Name (CN): mi-dominio.com, emailAddress = admin@mi-dominio.com",
+  "Days Until Expiry": "✅ The certificate will expire in 364 days.",
+  "Certificate-Key Match": "✅ Certificate and private key match."
+}
