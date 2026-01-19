@@ -1,7 +1,0 @@
-[
-  {"step": "check_files", "result": "success", "message": "Archivos de clave privada y certificado encontrados."}
-,
-  {"step": "check_certificate", "result": "success", "message": "El certificado es válido."}
-,
-  {"step": "check_apache_config", "result": "success", "message": "La configuración de Apache SSL es correcta."}
-]
