@@ -49,8 +49,8 @@ KEY_PATH=""
 
 for conf in /etc/apache2/sites-enabled/*.conf /etc/httpd/conf.d/*.conf; do
     [[ -f "$conf" ]] || continue
-    crt=$(grep -i "SSLCertificateFile" "$conf" | awk '{print $2}')
-    key=$(grep -i "SSLCertificateKeyFile" "$conf" | awk '{print $2}')
+    crt=$(awk 'tolower($1)=="sslcertificatefile"{print $2; exit}' "$conf")
+    key=$(awk 'tolower($1)=="sslcertificatekeyfile"{print $2; exit}' "$conf")
     if [[ -f "$crt" && -f "$key" ]]; then
         CRT_PATH="$crt"
         KEY_PATH="$key"
