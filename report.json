@@ -1,3 +1,0 @@
-{
-  "Apache Service": "✅ Apache is running.","SSL Module": "✅ The SSL module is enabled.","Certificate File": "❌ No certificate file found. Check your Apache SSL configuration.","Key File": "❌ No private key file found. Check your Apache SSL configuration.","Certificate Validity": "❌ Cannot validate the certificate. File not found or invalid format."
-}
