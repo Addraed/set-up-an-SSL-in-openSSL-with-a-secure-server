@@ -89,6 +89,18 @@ else
     add_report "Certificate Validity" "❌ Cannot validate the certificate. File not found or invalid format."
 fi
 
-# 7. Output report.json
-echo -e "{\n$(IFS=,; echo "  ${report[*]}")\n}" > "$REPORT"
+# 7. Output report.json with proper JSON formatting
+{
+    echo "{"
+    for i in "${!report[@]}"; do
+        echo -n "  ${report[$i]}"
+        if [[ $i -lt $((${#report[@]} - 1)) ]]; then
+            echo ","
+        else
+            echo ""
+        fi
+    done
+    echo "}"
+} > "$REPORT"
+
 echo "✅ Validation complete. Check the report: $REPORT"
